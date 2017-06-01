@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metatype:MetaData xmlns:metatype="http://www.osgi.org/xmlns/metatype/v1.1.0" >
+
+    <OCD name="helloWorld"
+         description="runtime configuration for HelloWorld"
+         id="ddf.training.HelloWorld">
+        <AD name="description" description="A description of this world"
+            id="description" type="String" default="default description" />
+        <AD name="name" description="The name of this world"
+            id="name" type="String" default="Foo" />
+    </OCD>
+
+    <Designate pid="ddf.training.HelloWorld">
+        <Object ocdref="ddf.training.HelloWorld" />
+    </Designate>
+
+</metatype:MetaData>

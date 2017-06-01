@@ -1,0 +1,8 @@
+<blueprint xmlns="http://www.osgi.org/xmlns/blueprint/v1.0.0">
+
+	<bean id="plugin" class="ddf.training.catalog.plugin.ThumbnailValidatorPlugin"/>
+
+	<!-- Register in the OSGi Service Registry -->
+	<service ref="plugin" interface="ddf.catalog.plugin.PreIngestPlugin" />
+
+</blueprint>

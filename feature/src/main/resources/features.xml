@@ -1,0 +1,31 @@
+<features name="${project.artifactId}-${project.version}"
+          xmlns="http://karaf.apache.org/xmlns/features/v1.3.0"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://karaf.apache.org/xmlns/features/v1.3.0 http://karaf.apache.org/xmlns/features/v1.3.0">
+
+    <feature name="helloWorld-client" install="manual" version="${project.version}"
+             description="HelloWorld Client">
+        <bundle>mvn:org.apache.aries.samples.blueprint.helloworld/org.apache.aries.samples.blueprint.helloworld.client/${project.version}</bundle>
+    </feature>
+
+    <feature name="helloWorld-api" install="manual" version="${project.version}"
+             description="HelloWorld API">
+        <bundle>mvn:org.apache.aries.samples.blueprint.helloworld/org.apache.aries.samples.blueprint.helloworld.api/${project.version}</bundle>
+    </feature>
+
+    <feature name="helloWorld-service" install="manual" version="${project.version}"
+             description="HelloWorld Service">
+        <bundle>mvn:org.apache.aries.samples.blueprint.helloworld/org.apache.aries.samples.blueprint.helloworld.server/${project.version}</bundle>
+
+    </feature>
+
+    <feature name="helloWorld-app" install="manual" version="${project.version}"
+             description="HelloWorld Application">
+        <feature prerequisite="true">helloWorld-api</feature>
+        <feature>helloWorld-service</feature>
+        <feature>helloWorld-client</feature>
+    </feature>
+
+
+
+</features>

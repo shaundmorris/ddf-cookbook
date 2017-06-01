@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<blueprint xmlns="http://www.osgi.org/xmlns/blueprint/v1.0.0">
+    <bean id="HelloWorld" class="ddf.training.HelloWorld">
+        <!-- constructor argument example -->
+        <argument value="Blueprint"/>
+        <!-- Bean property examples -->
+        <property name="description" value="Foo"/>
+        <property name="name" value="Bar"/>
+    </bean>
+</blueprint>
