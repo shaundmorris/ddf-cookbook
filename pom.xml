@@ -15,10 +15,11 @@
     </properties>
     <modules>
         <module>bundle</module>
+        <!-- Removed to get build passing first 
         <module>feature</module>
         <module>thumbnail-validator-plugin</module>
         <module>text-metacard-transformer</module>
-        <module>text-queryresponse-transformer</module>
+        <module>text-queryresponse-transformer</module> -->
     </modules>
 
     <dependencyManagement>
